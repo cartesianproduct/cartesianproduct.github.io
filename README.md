@@ -24,6 +24,10 @@ Qualitative, quantitative and geospatial data for helping determine renewable en
 
 # Solution:
 
+# Workflow
+
+![alt tag](https://github.com/cartesianproduct/cartesianproduct.github.io/tree/master/imgs/township.png)
+
 Landing Page:
 
 http://cameronwkruse.com/cartesianproduct/
