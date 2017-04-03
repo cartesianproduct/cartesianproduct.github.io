@@ -24,13 +24,38 @@ Qualitative, quantitative and geospatial data for helping determine renewable en
 
 # Solution:
 
-# Workflow
+Our Motto is:
+
+$See the data Be the data add to the data $
+
+# Workflow:
+
+This is a adaptable solution for any data beyond Myanmar(Burma).  But this is the overall process:
+
+![Screenshot](imgs/workflow.png)
+
+After the data is uploaded, you can look it at a Township level.  This can easily be changed to zip codes.
 
 ![Screenshot](imgs/township.png)
+
+Or in a heatmap by selecting data you want to display
+
+![Screenshot](imgs/Heat Map.png)
+
+You can also check the Microgrid data and the distances to a power line, the closer it is to a power line the bigger the circle
+
+![Screenshot](imgs/microgrid.png)
+
+You can also look at energy potential.  Shaded areas have higher potential as opposed to the lighter areas.
+
+![Screenshot](imgs/energy_potential.png)
+
+# Links:
 
 Landing Page:
 
 http://cameronwkruse.com/cartesianproduct/
+
 
 Solar Potential:
 
