@@ -38,9 +38,9 @@ After the data is uploaded, you can look it at a Township level.  This can easil
 
 ![Screenshot](imgs/township.png)
 
-Or in a heatmap by selecting data you want to display
+Or in a heatmap by selecting data you want to display:
 
-![Screenshot](imgs/Heat Map.png)
+![Screenshot](imgs/Heat_Map.png)
 
 You can also check the Microgrid data and the distances to a power line, the closer it is to a power line the bigger the circle
 
