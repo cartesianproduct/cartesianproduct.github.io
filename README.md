@@ -1,6 +1,6 @@
 # Cartesian Product 
 
-Information and data that we compiled during the Energy Challenge Hackathon
+Work that we compiled during the Energy Challenge Hackathon
 
 # Prompt: 
 
