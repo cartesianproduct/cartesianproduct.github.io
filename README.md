@@ -26,7 +26,7 @@ Qualitative, quantitative and geospatial data for helping determine renewable en
 
 Our Motto is:
 
-$See the data Be the data add to the data $
+See the data Be the data add to the data
 
 # Workflow:
 
