@@ -54,14 +54,14 @@ You can also look at energy potential.  Shaded areas have higher potential as op
 
 Landing Page:
 
-http://cameronwkruse.com/cartesianproduct/
+[a link](http://cameronwkruse.com/cartesianproduct/)
 
 
 Solar Potential:
 
-http://cameronwkruse.com/cartesianproduct/solarpotential
+[a link](http://cameronwkruse.com/cartesianproduct/solarpotential)
 
 Main Grid Plan:
 
-http://cameronwkruse.com/cartesianproduct/maingridplan
+[a link](http://cameronwkruse.com/cartesianproduct/maingridplan)
 
