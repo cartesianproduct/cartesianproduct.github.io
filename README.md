@@ -1,4 +1,6 @@
-# Cartesian Product ![Screenshot](imgs/cp.png)
+![Screenshot](imgs/cp.png)
+
+# Cartesian Product 
 
 Work that we compiled during the Energy Challenge Hackathon
 
