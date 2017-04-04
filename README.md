@@ -1,7 +1,5 @@
 
-![Screenshot](imgs/CP.png)
-
-# Cartesian Product 
+![Screenshot](imgs/CP.png) # Cartesian Product 
 
 
 
