@@ -2,6 +2,7 @@
 ![Screenshot](imgs/CP.png)
 
 Work that we compiled during the Energy Challenge Hackathon
+[View our product here](https://cartesianproduct.github.io/home)
 
 # Team Members:
 
