@@ -3,6 +3,24 @@
 
 Work that we compiled during the Energy Challenge Hackathon
 
+# Team Members:
+
+[Camreron Kruse](https://www.linkedin.com/in/krusecameron/) - Young Explorer
+
+VICTOR GARCIA - Data Scientist
+
+[MEHMET TURANALP](https://www.linkedin.com/in/mehmet-emin-turanalp/) - Software Engineer
+
+[LUKMAAN BAWAZER](https://www.linkedin.com/in/lukmaanbawazer/) - Data Scientist
+
+[ANTHONY ABERCROMBIE](https://www.linkedin.com/in/anthony-abercrombie-67264895/) - Data Scientist
+
+Z[ACHARY THOMAS](https://www.linkedin.com/in/thomaszi/) - Data Scientist
+
+[JASON CHIANG](https://www.linkedin.com/in/jachian22/) - Data Scientist
+
+[BAOLIN LIU](https://www.linkedin.com/in/baolinliu/) - Data Scientist
+
 # Prompt: 
 
 Access to timely and reliable data about renewable development is a major barrier to the expansion of energy access
