@@ -5,7 +5,7 @@ Work that we compiled during the Energy Challenge Hackathon
 
 # Team Members:
 
-[Camreron Kruse](https://www.linkedin.com/in/krusecameron/) - Young Explorer
+[CAMERON KRUSE](https://www.linkedin.com/in/krusecameron/) - Young Explorer
 
 VICTOR GARCIA - Data Scientist
 
@@ -15,7 +15,7 @@ VICTOR GARCIA - Data Scientist
 
 [ANTHONY ABERCROMBIE](https://www.linkedin.com/in/anthony-abercrombie-67264895/) - Data Scientist
 
-Z[ACHARY THOMAS](https://www.linkedin.com/in/thomaszi/) - Data Scientist
+[ZACHARY THOMAS](https://www.linkedin.com/in/thomaszi/) - Data Scientist
 
 [JASON CHIANG](https://www.linkedin.com/in/jachian22/) - Data Scientist
 
