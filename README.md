@@ -27,9 +27,9 @@ Qualitative, quantitative and geospatial data for helping determine renewable en
 
 Our Motto is:
 
-- See the data
-- Be the data 
-- Add to the data
+• See the data
+• Be the data 
+• Add to the data
 
 # Workflow:
 
@@ -41,7 +41,11 @@ After the data is uploaded, you can look it at a Township level.  This can easil
 
 ![Screenshot](imgs/township.png)
 
-Or in a heatmap by selecting data you want to display:
+You can also look at subgroups as well.  For example, if you choose power source from the data menu you can click on a dot (colored by total power sources surveyed in a township) , you can view a breakdown of power source.
+
+![Screenshot](imgs/submenu.png)
+
+You can also use a heatmap by selecting data you want to display:
 
 ![Screenshot](imgs/Heat_Map.png)
 
