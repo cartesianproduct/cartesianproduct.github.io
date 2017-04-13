@@ -8,7 +8,7 @@ Work that we compiled during the Energy Challenge Hackathon
 
 [CAMERON KRUSE](https://www.linkedin.com/in/krusecameron/) - Young Explorer
 
-VICTOR GARCIA - Data Scientist
+[VICTOR GARCIA](https://www.linkedin.com/in/evictorgarcia/)- Data Scientist
 
 [MEHMET TURANALP](https://www.linkedin.com/in/mehmet-emin-turanalp/) - Software Engineer
 
