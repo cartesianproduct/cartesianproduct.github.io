@@ -4,7 +4,7 @@
 
 ## PDFS with data already extracted:
 
-- FA1MMRPovertyProfile_Eng.pdf. See `data/Household_living_conditions_Survey`. Thanks a ton, Baolin! 
+- `FA1MMRPovertyProfile_Eng.pdf`. See `data/Household_living_conditions_Survey`. Thanks a ton, Baolin! 
 
 ## Other PDFS: 
 
