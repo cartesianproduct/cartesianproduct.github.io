@@ -39,7 +39,9 @@ Demographic_dependency_ratio - Pg 32
 
 Economic_dependency_ratio - Pg 33
 
-female-headed_households - Pg 35
+Education Level of the household head - Pg 98
+
+Female-headed_households - Pg 35
 
 Landless_Rate_in_Agriculture - Pg 43
 
