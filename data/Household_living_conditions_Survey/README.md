@@ -19,31 +19,31 @@ This is regional data collected that may indicate who can pay for solar from the
 
 List of Tables collected:
 
-Access_to_credit_agriculture - Pg 46
+1) Access_to_credit_agriculture - Pg 46
 
-Access_to_credit_Non-Agricultural_businesses - Pg 47
+2) Access_to_credit_Non-Agricultural_businesses - Pg 47
 
-Access_to_electricity - Pg 67
+3) Access to electricity - Pg 67
 
-Access_to_improved_sanitation - Pg 66
+4) Access to improved sanitation - Pg 66
 
-Access_to_quality_roofing - Pg 62
+5) Access to quality roofing - Pg 62
 
-Access_to_safe_drinking_water - Pg 64
+6) Access to safe drinking water - Pg 64
 
-Average_Land_Area_Owned - Pg 41 
+7) Average Land Area Owned - Pg 41 
 
-Average_Household_Size - Pg 30
+8) Average Household Size - Pg 30
 
-Demographic_dependency_ratio - Pg 32
+9) Demographic dependency ratio - Pg 32
 
-Economic_dependency_ratio - Pg 33
+10) Economic dependency ratio - Pg 33
 
-Education Level of the household head - Pg 98
+11) Education Level of the household head - Pg 98
 
-Female-headed_households - Pg 35
+12) Female-headed households - Pg 35
 
-Landless_Rate_in_Agriculture - Pg 43
+13) Landless Rate in Agriculture - Pg 43
 
-Poverty_Transitions_Matrix - Pg 25
+14) Poverty Transitions Matrix - Pg 25
 
