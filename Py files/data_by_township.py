@@ -9,6 +9,43 @@ import pandas as pd
 # pandas
 
 #===============================================================================
+# UTILITY FUNCTIONS
+#===============================================================================
+
+# def _dlfile(url):
+# 	'''
+# 	Downloads file from a url (str)
+# 	'''
+# 	try:
+# 		f = urlopen(url)
+# 		print "downloading " + url
+
+# 		with open(os.path.basename(url), "wb") as local_file:
+# 			local_file.write(f.read())
+
+# 	except HTTPError, e:
+# 		print "HTTP Error:", e.code, url
+# 	except URLError, e:
+# 		print "URL Error:", e.reason, url
+
+# def _extract_from_zip(zip_file):
+# 	'''
+# 	Checks if the baby names dataset is local and employs "dlfile" to download
+# 	it and extract the files if not.
+# 	'''
+# 	if not os.path.isfile(zip_file):
+# 		url = "http://www.ssa.gov/oact/babynames/state/namesbystate.zip"
+# 		directory = 'myan_data'
+# 		dlfile(url)
+# 		archive = zipfile.ZipFile(zip_file, 'r')
+# 		if not os.path.exists(directory):
+# 			os.makedirs(directory)
+# 		archive.extractall(path=directory)
+
+#===============================================================================
+# MAIN FUNCTIONS
+#===============================================================================
+
 def get_data():
 	'''
 		This function grabs data from multiple data sources to collect metadata
@@ -21,15 +58,15 @@ def get_data():
 
 		OUTPUT: Pandas dataframe of the township data in Myanmar.
 	'''
-	### PREPROCESSING ###
-	# Township pcode location data
-	pcodes_full = pd.read_csv('Myanmar PCodes Release-VIII_Aug2015 (Villages).csv')
-	cols = ['TS_Pcode', 'Longitude', 'Latitude']
-	pcodes = pd.DataFrame(pcodes_full[cols].values)
-	pcodes.columns = ['pcode_ts', 'longitude', 'latitude']
+	# ### PREPROCESSING ###
+	# # Township pcode location data
+	# pcodes_full = pd.read_csv('Myanmar PCodes Release-VIII_Aug2015 (Villages).csv')
+	# cols = ['TS_Pcode', 'Longitude', 'Latitude']
+	# pcodes = pd.DataFrame(pcodes_full[cols].values)
+	# pcodes.columns = ['pcode_ts', 'longitude', 'latitude']
 
 	# Township population data
-	township_full = pd.read_excel('BaselineData_Census_Dataset_Township_MIMU_16Jun2016_ENG.xlsx')
+	township_full = pd.read_excel('raw_data/BaselineData_Census_Dataset_Township_MIMU_16Jun2016_ENG.xlsx')
 	township_full.columns = ['t_' + str(i) for i in xrange(township_full.shape[1])]
 
 	cols = ['t_4', 't_5', 't_6', 't_24', 't_54', 't_66', 't_78']
@@ -39,37 +76,37 @@ def get_data():
 
 	# Mean household size
 	cols = ['pcode_ts', 'mean_hhsize'] + ['hh_' + str(i) for i in xrange(1, 10)]
-	mean_hh_full = pd.read_csv('CensusmeanHHsizetsp.csv')
+	mean_hh_full = pd.read_csv('raw_data/CensusmeanHHsizetsp.csv')
 	mean_hh = pd.DataFrame(mean_hh_full[cols].values)
 	mean_hh.columns = cols
 
 	# Census data for light sources
-	cols = ['pcode_ts', 'light_total', 'electricity', 'kerosene',\
-			'candle', 'lbattery', 'generator', 'water', 'solar', 'other']
-	light_source_full = pd.read_csv('Censussourceoflighttsp.csv')
+	cols = ['pcode_ts', 'light_t', 'light_elec', 'light_kero', 'light_cand',\
+			'light_batt', 'light_gen', 'light_wat', 'light_sol', 'light_oth']
+	light_source_full = pd.read_csv('raw_data/Censussourceoflighttsp.csv')
 	light_source = pd.DataFrame(light_source_full[cols].values)
-	new_cols = ['pcode_ts', 'light_total', 'l_source_electricity', 'l_source_kerosene',\
-			'l_source_candle', 'l_source_lbattery', 'l_source_generator',\
-			'l_source_water', 'l_source_solar', 'l_source_other']
-	light_source.columns = new_cols
+	# new_cols = ['pcode_ts', 'light_total', 'l_source_electricity', 'l_source_kerosene',\
+	# 		'l_source_candle', 'l_source_lbattery', 'l_source_generator',\
+	# 		'l_source_water', 'l_source_solar', 'l_source_other']
+	light_source.columns = cols
 
 	# Census transportation data
 	cols = ['pcode_ts', 'trans_t', 'trans_car', 'trans_mcyc', 'trans_bicyc',\
 			'trans_4wheel', 'trans_canoe', 'trans_mboat', 'trans_cart']
-	transportation_full = pd.read_csv('Censustransportationtsp.csv')
+	transportation_full = pd.read_csv('raw_data/Censustransportationtsp.csv')
 	transportation = pd.DataFrame(transportation_full[cols].values)
 	transportation.columns = cols
 
 	# Census home ownership data
 	cols = ['pcode_ts', 'ownshp_t', 'ownshp_own', 'ownshp_rent', 'ownshp_free',\
 			'ownshp_gov', 'ownshp_com', 'ownshp_oth']
-	home_ownership_full = pd.read_csv('Censusownershipofhousingtsp.csv')
+	home_ownership_full = pd.read_csv('raw_data/Censusownershipofhousingtsp.csv')
 	home_ownership = pd.DataFrame(home_ownership_full[cols].values)
 	home_ownership.columns = cols
 
 	# Census communication data
 	cols = ['pcode_ts', 'com_t', 'com_radio', 'com_tv', 'com_lline', 'com_mob', 'com_comp', 'com_int']
-	communication_full = pd.read_csv('Censuscommuniationtsp.csv')
+	communication_full = pd.read_csv('raw_data/Censuscommuniationtsp.csv')
 	communication_full[cols].head()
 	communication = pd.DataFrame(communication_full[cols].values)
 	communication.columns = cols
@@ -77,7 +114,7 @@ def get_data():
 	# Housing-type data
 	cols = ['pcode_ts', 'housing_t', 'housing_apt', 'housing_bung', 'housing_semi', 'housing_wood',\
 			'housing_bamb', 'housing_hut23', 'housing_hut1', 'housing_oth']
-	housing_full = pd.read_csv('HouseholdPopulationbaseddatasetMIMUTownshipsabbreviated.csv')
+	housing_full = pd.read_csv('raw_data/HouseholdPopulationbaseddatasetMIMUTownshipsabbreviated.csv')
 	housing = pd.DataFrame(housing_full[cols].values)
 	housing.columns = cols
 
@@ -104,8 +141,8 @@ def get_data():
 		'com_pp_mob',
 		'com_pp_comp',
 		'com_pp_int',
-		'l_source_pp_solar',
-		'l_source_pp_generator',
+		'light_sol',
+		'light_gen',
 		'trans_pp_car',
 		'trans_pp_mcyc',
 		'trans_pp_4wheel'
@@ -130,8 +167,8 @@ def get_data():
 	df_all['com_pp_int']         = df_all.com_int / df_all.pop_total
 
 	# all_other_pp_etc
-	df_all['l_source_pp_solar']     = df_all.l_source_solar / df_all.pop_total
-	df_all['l_source_pp_generator'] = df_all.l_source_generator / df_all.pop_total
+	df_all['light_pp_solar']     = df_all.light_sol / df_all.pop_total
+	df_all['light_pp_generator'] = df_all.light_gen / df_all.pop_total
 	df_all['trans_pp_car']          = df_all.trans_car / df_all.pop_total
 	df_all['trans_pp_mcyc']         = df_all.trans_mcyc / df_all.pop_total
 	df_all['trans_pp_4wheel']       = df_all.trans_4wheel / df_all.pop_total
@@ -153,7 +190,7 @@ def get_info():
 			VALUES: datatype, summary of the column, link to the original data source
 	'''
 	info = {
-	'pcode_ts':             ['id', 'unique ids to denote specific townships in Myanmar', 'http://themimu.info/doc-type/census-baseline-data'],
+	'pcode_ts':             ['id', 'unique ids to denote specific townships in Myanmar', 'https://data.opendevelopmentmekong.net/en/dataset/myanmar-township-boundaries'],
 	'township_name':        ['general', 'name of the township', 'http://themimu.info/doc-type/census-baseline-data'],
 	'pop_total':            ['general', 'population total', 'http://themimu.info/doc-type/census-baseline-data'] ,
 	'urban_perc':           ['general', 'percentage of the township that is urban', 'http://themimu.info/doc-type/census-baseline-data'],
@@ -170,15 +207,15 @@ def get_info():
 	'hh_7':                 ['household', 'total households of 7 people', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
 	'hh_8':                 ['household', 'total households of 8 people', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
 	'hh_9':                 ['household', 'total households of 9+ people', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
-	'light_total':          ['light sources', 'total', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
-	'l_source_electricity': ['light sources', 'light generated from electricity', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
-	'l_source_kerosene':    ['light sources', 'kerosene light source', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
-	'l_source_candle':      ['light sources', 'candle light', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
-	'l_source_lbattery':    ['light sources', 'battery-powered lights', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
-	'l_source_generator':   ['light sources', 'private generator', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
-	'l_source_water':       ['light sources', 'private water mill', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
-	'l_source_solar':       ['light sources', 'solar system energy', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
-	'l_source_other':       ['light sources', 'other light source', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
+	'light_t':              ['light sources', 'total', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
+	'light_elec':           ['light sources', 'light generated from electricity', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
+	'light_kero':           ['light sources', 'kerosene light source', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
+	'light_cand':           ['light sources', 'candle light', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
+	'light_batt':           ['light sources', 'battery-powered lights', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
+	'light_gen':            ['light sources', 'private generator', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
+	'light_wat':            ['light sources', 'private water mill', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
+	'light_sol':            ['light sources', 'solar system energy', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
+	'light_oth':            ['light sources', 'other light source', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
 	'trans_t':              ['transportation', 'total households', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
 	'trans_car':            ['transportation', 'car, truck, or van', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
 	'trans_mcyc':           ['transportation', 'motorcycle moped', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
@@ -224,8 +261,8 @@ def get_info():
 	'com_pp_mob':           ['communication', '???', 'feature engineered'],
 	'com_pp_comp':          ['communication', '???', 'feature engineered'],
 	'com_pp_int':           ['communication', '???', 'feature engineered'],
-	'l_source_pp_solar':    ['light sources', '???', 'feature engineered'],
-	'l_source_pp_generator':['light sources', '???', 'feature engineered'],
+	'light_pp_solar':       ['light sources', '???', 'feature engineered'],
+	'light_pp_generator':   ['light sources', '???', 'feature engineered'],
 	'trans_pp_car':         ['transportation', '???', 'feature engineered'],
 	'trans_pp_mcyc':        ['transportation', '???', 'feature engineered'],
 	'trans_pp_4wheel':      ['transportation', '???', 'feature engineered']
