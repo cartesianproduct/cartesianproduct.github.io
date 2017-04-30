@@ -66,7 +66,7 @@ def get_data():
 	# pcodes.columns = ['pcode_ts', 'longitude', 'latitude']
 
 	# Township population data
-	township_full = pd.read_excel('raw_data/BaselineData_Census_Dataset_Township_MIMU_16Jun2016_ENG.xlsx')
+	township_full = pd.read_excel('../data/township_data/BaselineData_Census_Dataset_Township_MIMU_16Jun2016_ENG.xlsx')
 	township_full.columns = ['t_' + str(i) for i in xrange(township_full.shape[1])]
 
 	cols = ['t_4', 't_5', 't_6', 't_24', 't_54', 't_66', 't_78']
@@ -76,14 +76,14 @@ def get_data():
 
 	# Mean household size
 	cols = ['pcode_ts', 'mean_hhsize'] + ['hh_' + str(i) for i in xrange(1, 10)]
-	mean_hh_full = pd.read_csv('raw_data/CensusmeanHHsizetsp.csv')
+	mean_hh_full = pd.read_csv('../data/township_data/CensusmeanHHsizetsp.csv')
 	mean_hh = pd.DataFrame(mean_hh_full[cols].values)
 	mean_hh.columns = cols
 
 	# Census data for light sources
 	cols = ['pcode_ts', 'light_t', 'light_elec', 'light_kero', 'light_cand',\
 			'light_batt', 'light_gen', 'light_wat', 'light_sol', 'light_oth']
-	light_source_full = pd.read_csv('raw_data/Censussourceoflighttsp.csv')
+	light_source_full = pd.read_csv('../data/township_data/Censussourceoflighttsp.csv')
 	light_source = pd.DataFrame(light_source_full[cols].values)
 	# new_cols = ['pcode_ts', 'light_total', 'l_source_electricity', 'l_source_kerosene',\
 	# 		'l_source_candle', 'l_source_lbattery', 'l_source_generator',\
@@ -93,20 +93,20 @@ def get_data():
 	# Census transportation data
 	cols = ['pcode_ts', 'trans_t', 'trans_car', 'trans_mcyc', 'trans_bicyc',\
 			'trans_4wheel', 'trans_canoe', 'trans_mboat', 'trans_cart']
-	transportation_full = pd.read_csv('raw_data/Censustransportationtsp.csv')
+	transportation_full = pd.read_csv('../data/township_data/Censustransportationtsp.csv')
 	transportation = pd.DataFrame(transportation_full[cols].values)
 	transportation.columns = cols
 
 	# Census home ownership data
 	cols = ['pcode_ts', 'ownshp_t', 'ownshp_own', 'ownshp_rent', 'ownshp_free',\
 			'ownshp_gov', 'ownshp_com', 'ownshp_oth']
-	home_ownership_full = pd.read_csv('raw_data/Censusownershipofhousingtsp.csv')
+	home_ownership_full = pd.read_csv('../data/township_data/Censusownershipofhousingtsp.csv')
 	home_ownership = pd.DataFrame(home_ownership_full[cols].values)
 	home_ownership.columns = cols
 
 	# Census communication data
 	cols = ['pcode_ts', 'com_t', 'com_radio', 'com_tv', 'com_lline', 'com_mob', 'com_comp', 'com_int']
-	communication_full = pd.read_csv('raw_data/Censuscommuniationtsp.csv')
+	communication_full = pd.read_csv('../data/township_data/Censuscommuniationtsp.csv')
 	communication_full[cols].head()
 	communication = pd.DataFrame(communication_full[cols].values)
 	communication.columns = cols
@@ -114,7 +114,7 @@ def get_data():
 	# Housing-type data
 	cols = ['pcode_ts', 'housing_t', 'housing_apt', 'housing_bung', 'housing_semi', 'housing_wood',\
 			'housing_bamb', 'housing_hut23', 'housing_hut1', 'housing_oth']
-	housing_full = pd.read_csv('raw_data/HouseholdPopulationbaseddatasetMIMUTownshipsabbreviated.csv')
+	housing_full = pd.read_csv('../data/township_data/HouseholdPopulationbaseddatasetMIMUTownshipsabbreviated.csv')
 	housing = pd.DataFrame(housing_full[cols].values)
 	housing.columns = cols
 
