@@ -1,32 +1,26 @@
-# Cartesian Product 
+![Screenshot](imgs/cartesianproduct_gist.png)
 
-Information and data that we compiled during the Energy Challenge Hackathon
+# About
 
-# Prompt: 
+This project is a response to the U.S. Department of State’s Clean Energy Data Science Challenge, co-hosted by Booz Allen Hamilton, the World Bank and Galvanize in San Francisco in April of 2017. Over the course of 48 hours, a team of seven data scientists and hackers put together a data product that helps impact investors identify promising markets for solar microgrid development in Myanmar. Here's the scoop:
 
-Access to timely and reliable data about renewable development is a major barrier to the expansion of energy access
+_"Over 1 billion people around the world lack access to electricity and another billion lack access to reliable electricity. Providing access to energy can enable progress across the education, health, social, and economic sectors. Innovative and scalable solutions are needed to meet the drastically rising demand for electricity across the developing world, as well as the urgent imperative to significantly reduce global carbon emissions. One of the primary challenges is a lack of adequate financing for distributed energy projects — particularly from the private sector. A leading barrier to stimulating private finance is often a lack of access to reliable, real-time data and analysis about the country’s renewable energy development potential.
+Companies and developers are also be hesitant to do business in countries that don’t have or provide information necessary for identifying renewable energy sites. They may be unable to afford conducting assessments themselves. And current methods for assessments, when conducted, can take months or years to assess where to complete."_
 
-Implications of Data Constraints:
+**-Zvika Krieger, US State Department**
+<iframe src="https://player.vimeo.com/video/213028055" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-Lack of data and the ability to quickly analyze it developers from answering critical questions, such as:
+[![Clean Energy Challenge](imgs/clean_energy_challenge.textClipping)](https://player.vimeo.com/video/213028055 "Clean Energy Challenge - Click to Watch!")
 
-• Who Needs It the Most?
+# Product
 
-– Household data to help identify those most in need Household 
+Cartesian Product is a clean energy knowledge management platform that enables a diverse set of users to identify high-potential emerging energy markets. Beyond being a static ad-hoc analysis, the site includes a backend that lets researchers and surveyors contribute their own data to the platform. The vision was to crowd-source the collection of ground-truth data to domain experts: enabling future machine learning solutions to predict risk, reward, and social + environmental ROI.
 
-• Who Can Pay? 
+We aggregated and distilled a diverse set of survey and geospatial data to derive metrics that answer the following questions:
 
- – A lack of access to reliable data prevents developers and investors to accurately assess viability
-
-• Where Should We Build? 
-
-Qualitative, quantitative and geospatial data for helping determine renewable energy is currently incomplete
-
-# Solution:
-
-Our Motto is:
-
-See the data Be the data add to the data
+1. Where are the regions with high photovoltaic (PV) potential?
+2. Which townships are dense and affluent enough to be able to afford microgrid systems?
+3. Where is the preexisting electricity grid likely to expand?
 
 # Workflow:
 
@@ -65,3 +59,12 @@ Main Grid Plan:
 
 http://cameronwkruse.com/cartesianproduct/maingridplan
 
+# Contributors
+- Cameron Kruse : Frontend Web Development
+- Anthony Abercrombie : Geospatial Data Science
+- Victor Garcia : Data Science
+- Lukmaan Bawazer : Data Science
+- Zachary Thomas : Data Science
+- Jason Chiange : Data Engineering
+- Baolin Liu : Data Engineering
+- Mehmet Turanalp: Software Engineering
