@@ -8,9 +8,8 @@ _"Over 1 billion people around the world lack access to electricity and another 
 Companies and developers are also be hesitant to do business in countries that don’t have or provide information necessary for identifying renewable energy sites. They may be unable to afford conducting assessments themselves. And current methods for assessments, when conducted, can take months or years to assess where to complete."_
 
 **-Zvika Krieger, US State Department**
-<iframe src="https://player.vimeo.com/video/213028055" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-[![Clean Energy Challenge](imgs/clean_energy_challenge.textClipping)](https://player.vimeo.com/video/213028055 "Clean Energy Challenge - Click to Watch!")
+[![Clean Energy Challenge](imgs/clean_energy_challenge.png)](https://player.vimeo.com/video/213028055 "Clean Energy Challenge - Click to Watch!")
 
 # Product
 
