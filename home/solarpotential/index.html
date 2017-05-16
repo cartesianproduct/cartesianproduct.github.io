@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Solar Potential Map: Kwh/m2</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.css" />
+  </head>
+  <body>
+    <div class="header">
+        <h1>Where Should Stakeholders Invest in Solar PV Systems and Microgrids?</h1>
+        <!-- <h2>Photovoltaic Potential of Myanmar's village tracts: kWh/m2</h1> -->
+    </div>
+
+    <div>
+    <!-- <h2><br>Mean Photovoltaic Potential</h2>
+    <iframe width="100%" height="520" frameborder="0" src="https://amarinusha.carto.com/viz/3307e39a-1788-11e7-beb9-0e3ebc282e83/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+    <img src="mean_pv.png" alt="Mean PV Potential" height="420" width="420"> -->
+
+
+    <h3><br>Discover Solar/Microgrid Development Potential: </h2>
+    <iframe width="100%" height="880" frameborder="0" src="https://amarinusha.carto.com/viz/c1911712-1783-11e7-87a9-0e3ff518bd15/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+  </div>
+
+  <div>
+    <img src="max_pv.png" alt="Max PV Potential" height="420" width="420">
+    <img src="mean_pv.png" alt="Mean PV Potential" height="420" width="420"> -->
+    <img src="min_pv.png" alt="Min PV Potential" height="420" width="420"> -->
+  </div>
+
+    <!-- <h3><br>Min Photovoltaic Potential</h2>
+    <iframe width="100%" height="520" frameborder="0" src="https://amarinusha.carto.com/viz/0ae2fae2-178a-11e7-86d1-0ee66e2c9693/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+    <img src="min_pv.png" alt="Min PV Potential" height="420" width="420"> -->
+    <!-- </div> -->
+
+    <div>
+      <h2>Methods</h2>
+      <p>Solar Irradiance was computed as the output of an open-source shading model that can be applied in the SAGA GIS software package. The model takes a digital elevation model as input and simulates direct and diffuse solar irradation on a surface over time. The model considers climate, atmospheric conditions, and the sun's shifting positions in the sky. For computational tractability, this model was fit for the duration of March 1 to March 31, 2017. The digital elevation model was generated using GMTED2010 (Global Multi-resolution Terrain Elevation Data), which is freely available with global coverage at 30 square meter resolutions. A more precise model could be trained with Lidar data of 1 square meter resolution. Given the course elevation model input, the kWh/m2 estimates are likely undervalued compared to ground truth.</p>
+      <p><br>The maps above show aggregate statistics of solar irradiance at the village tract level.</p>
+
+      <h3>Digital Elevation Model as Input:</h3>
+      <img src="dem.png" alt="DEM" height="769" width="418">
+
+      <h3>3D rendering of a DEM:</h3>
+      <img src="terrainmodel.jpg" alt="Mean PV Potential" height="420" width="420">
+
+
+      <h3>Solar Irradiance in kWh/m2 as Outpt:</h3>
+      <img src="irradiance.png" alt="Irradiance" height="776" width="559">
+
+      <h3>Global Solar Irradiance Annual Estimates:</h3>
+      <img src="global_pv.png" alt="Global Irradiance" height="739" width="1500">
+
+
+    <!-- include cartodb.js library -->
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.js"></script>
+
+    <script>
+      // you could use $(window).load(main);
+      window.onload = main;
+    </script>
+  </body>
+</html>

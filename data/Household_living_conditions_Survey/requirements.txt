@@ -1,0 +1,16 @@
+
+Python 2.7 or higher
+
+PyPDF2 - pip install PyPDF2 , splits PDF pages of interest
+ 
+re - reggae to clean string data
+
+pandas - excel for python 
+
+Steps:
+
+1.  Using the PyPDF2 package, slice pages of interest
+
+2.  Copy paste the table data into Excel and save
+
+3.  Clean the string text, and save it into a pandas DataFrame for visualization later
