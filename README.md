@@ -1,56 +1,25 @@
 
-![Screenshot](imgs/CP.png)
+![Screenshot](imgs/cartesianproduct_gist.png)
 
-Work that we compiled during the Energy Challenge Hackathon
-[View our product here](https://cartesianproduct.github.io/home)
+This project is a response to the U.S. Department of State’s Clean Energy Data Science Challenge, co-hosted by Booz Allen Hamilton, the World Bank and Galvanize in San Francisco in April of 2017. Over the course of 48 hours, a team of seven data scientists and hackers put together a data product that helps impact investors identify promising markets for solar microgrid development in Myanmar. Here's the scoop:
 
-# Team Members:
+_"Over 1 billion people around the world lack access to electricity and another billion lack access to reliable electricity. Providing access to energy can enable progress across the education, health, social, and economic sectors. Innovative and scalable solutions are needed to meet the drastically rising demand for electricity across the developing world, as well as the urgent imperative to significantly reduce global carbon emissions. One of the primary challenges is a lack of adequate financing for distributed energy projects — particularly from the private sector. A leading barrier to stimulating private finance is often a lack of access to reliable, real-time data and analysis about the country’s renewable energy development potential.
+Companies and developers are also be hesitant to do business in countries that don’t have or provide information necessary for identifying renewable energy sites. They may be unable to afford conducting assessments themselves. And current methods for assessments, when conducted, can take months or years to assess where to complete."_
 
-[CAMERON KRUSE](https://www.linkedin.com/in/krusecameron/) - Young Explorer
+**-Zvika Krieger, US State Department**
 
-[VICTOR GARCIA](https://www.linkedin.com/in/evictorgarcia/)- Data Scientist
+[![Clean Energy Challenge](imgs/clean_energy_challenge.png)](https://player.vimeo.com/video/213028055 "Clean Energy Challenge - Click to Watch!")
 
-[MEHMET TURANALP](https://www.linkedin.com/in/mehmet-emin-turanalp/) - Software Engineer
+# Product
 
-[LUKMAAN BAWAZER](https://www.linkedin.com/in/lukmaanbawazer/) - Data Scientist
+Cartesian Product is a clean energy knowledge management platform that enables a diverse set of users to identify high-potential emerging energy markets. Beyond being a static ad-hoc analysis, the site includes a backend that lets researchers and surveyors contribute their own data to the platform. The vision was to crowd-source the collection of ground-truth data to domain experts: enabling future machine learning solutions to predict risk, reward, and social + environmental ROI.
 
-[ANTHONY ABERCROMBIE](https://www.linkedin.com/in/anthony-abercrombie-67264895/) - Data Scientist
+We aggregated and distilled a diverse set of survey and geospatial data to derive metrics that answer the following questions:
 
-[ZACHARY THOMAS](https://www.linkedin.com/in/thomaszi/) - Data Scientist
+1. Where are the regions with high photovoltaic (PV) potential?
+2. Which townships are dense and affluent enough to be able to afford microgrid systems?
+3. Where is the preexisting electricity grid likely to expand?
 
-[JASON CHIANG](https://www.linkedin.com/in/jachian22/) - Data Scientist
-
-[BAOLIN LIU](https://www.linkedin.com/in/baolinliu/) - Data Scientist
-
-# Prompt: 
-
-Access to timely and reliable data about renewable development is a major barrier to the expansion of energy access
-
-Implications of Data Constraints:
-
-Lack of data and the ability to quickly analyze it developers from answering critical questions, such as:
-
-• Who Needs It the Most?
-
-– Household data to help identify those most in need Household 
-
-• Who Can Pay? 
-
- – A lack of access to reliable data prevents developers and investors to accurately assess viability
-
-• Where Should We Build? 
-
-Qualitative, quantitative and geospatial data for helping determine renewable energy is currently incomplete
-
-# Solution:
-
-Our Motto is:
-
-• See the data
-
-• Be the data 
-
-• Add to the data
 
 # Workflow:
 
@@ -93,3 +62,19 @@ Main Grid Plan Layout:
 
 [Main Grid Plan](http://cameronwkruse.com/cartesianproduct/maingridplan)
 
+# Contributors
+[CAMERON KRUSE](https://www.linkedin.com/in/krusecameron/) - Young Explorer
+
+[VICTOR GARCIA](https://www.linkedin.com/in/evictorgarcia/)- Data Scientist
+
+[MEHMET TURANALP](https://www.linkedin.com/in/mehmet-emin-turanalp/) - Software Engineer
+
+[LUKMAAN BAWAZER](https://www.linkedin.com/in/lukmaanbawazer/) - Data Scientist
+
+[ANTHONY ABERCROMBIE](https://www.linkedin.com/in/anthony-abercrombie-67264895/) - Geospatial Data Scientist
+
+[ZACHARY THOMAS](https://www.linkedin.com/in/thomaszi/) - Data Scientist
+
+[JASON CHIANG](https://www.linkedin.com/in/jachian22/) - Data Scientist
+
+[BAOLIN LIU](https://www.linkedin.com/in/baolinliu/) - Data Scientist
