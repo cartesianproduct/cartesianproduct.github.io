@@ -169,9 +169,9 @@ def get_data():
 	# all_other_pp_etc
 	df_all['light_pp_solar']     = df_all.light_sol / df_all.pop_total
 	df_all['light_pp_generator'] = df_all.light_gen / df_all.pop_total
-	df_all['trans_pp_car']          = df_all.trans_car / df_all.pop_total
-	df_all['trans_pp_mcyc']         = df_all.trans_mcyc / df_all.pop_total
-	df_all['trans_pp_4wheel']       = df_all.trans_4wheel / df_all.pop_total
+	df_all['trans_pp_car']       = df_all.trans_car / df_all.pop_total
+	df_all['trans_pp_mcyc']      = df_all.trans_mcyc / df_all.pop_total
+	df_all['trans_pp_4wheel']    = df_all.trans_4wheel / df_all.pop_total
 
 	# Handling NA value inputs
 	for col in agg:
@@ -191,12 +191,16 @@ def get_info():
 	'''
 	info = {
 	'pcode_ts':             ['id', 'unique ids to denote specific townships in Myanmar', 'https://data.opendevelopmentmekong.net/en/dataset/myanmar-township-boundaries'],
+	'state_name':           ['general', 'population total', 'http://themimu.info/doc-type/census-baseline-data'],
+	'polygon_boundary':     ['general', 'population total', 'http://themimu.info/doc-type/census-baseline-data'],
+	'centroid_lat':         ['general', 'population total', 'http://themimu.info/doc-type/census-baseline-data'],
+	'centroid_long':        ['general', 'population total', 'http://themimu.info/doc-type/census-baseline-data'],
 	'township_name':        ['general', 'name of the township', 'http://themimu.info/doc-type/census-baseline-data'],
-	'pop_total':            ['general', 'population total', 'http://themimu.info/doc-type/census-baseline-data'] ,
+	'pop_total':            ['general', 'population total', 'http://themimu.info/doc-type/census-baseline-data'],
 	'urban_perc':           ['general', 'percentage of the township that is urban', 'http://themimu.info/doc-type/census-baseline-data'],
-	'literacy_perc_total':  ['literacy', 'percentage of the township that is literate', 'http://themimu.info/doc-type/census-baseline-data'],
-	'literacy_perc_urban':  ['literacy', 'percentage of the urban township that is literate', 'http://themimu.info/doc-type/census-baseline-data'],
-	'literacy_perc_rural':  ['literacy', 'percentage of the rural township that is literate', 'http://themimu.info/doc-type/census-baseline-data'],
+	'literacy_perc_total':  ['general', 'percentage of the township that is literate', 'http://themimu.info/doc-type/census-baseline-data'],
+	'literacy_perc_urban':  ['general', 'percentage of the urban township that is literate', 'http://themimu.info/doc-type/census-baseline-data'],
+	'literacy_perc_rural':  ['general', 'percentage of the rural township that is literate', 'http://themimu.info/doc-type/census-baseline-data'],
 	'mean_hhsize':          ['household', 'mean household size', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
 	'hh_1':                 ['household', 'total households of 1 person', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
 	'hh_2':                 ['household', 'total households of 2 people', 'https://data.opendevelopmentmekong.net/dataset/2014-myanmar-census'],
