@@ -1,3 +1,6 @@
+
+__auther__ = "Baolin liu"
+
 import boto.dynamodb
 import json
 import datetime
