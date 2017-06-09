@@ -9,40 +9,6 @@ import pandas as pd
 # pandas
 
 #===============================================================================
-# UTILITY FUNCTIONS
-#===============================================================================
-
-# def _dlfile(url):
-# 	'''
-# 	Downloads file from a url (str)
-# 	'''
-# 	try:
-# 		f = urlopen(url)
-# 		print "downloading " + url
-
-# 		with open(os.path.basename(url), "wb") as local_file:
-# 			local_file.write(f.read())
-
-# 	except HTTPError, e:
-# 		print "HTTP Error:", e.code, url
-# 	except URLError, e:
-# 		print "URL Error:", e.reason, url
-
-# def _extract_from_zip(zip_file):
-# 	'''
-# 	Checks if the baby names dataset is local and employs "dlfile" to download
-# 	it and extract the files if not.
-# 	'''
-# 	if not os.path.isfile(zip_file):
-# 		url = "http://www.ssa.gov/oact/babynames/state/namesbystate.zip"
-# 		directory = 'myan_data'
-# 		dlfile(url)
-# 		archive = zipfile.ZipFile(zip_file, 'r')
-# 		if not os.path.exists(directory):
-# 			os.makedirs(directory)
-# 		archive.extractall(path=directory)
-
-#===============================================================================
 # MAIN FUNCTIONS
 #===============================================================================
 
@@ -58,13 +24,7 @@ def get_data():
 
 		OUTPUT: Pandas dataframe of the township data in Myanmar.
 	'''
-	# ### PREPROCESSING ###
-	# # Township pcode location data
-	# pcodes_full = pd.read_csv('Myanmar PCodes Release-VIII_Aug2015 (Villages).csv')
-	# cols = ['TS_Pcode', 'Longitude', 'Latitude']
-	# pcodes = pd.DataFrame(pcodes_full[cols].values)
-	# pcodes.columns = ['pcode_ts', 'longitude', 'latitude']
-
+	### PREPROCESSING ###
 	# Township population data
 	township_full = pd.read_excel('../data/township_data/BaselineData_Census_Dataset_Township_MIMU_16Jun2016_ENG.xlsx')
 	township_full.columns = ['t_' + str(i) for i in xrange(township_full.shape[1])]
@@ -85,9 +45,6 @@ def get_data():
 			'light_batt', 'light_gen', 'light_wat', 'light_sol', 'light_oth']
 	light_source_full = pd.read_csv('../data/township_data/Censussourceoflighttsp.csv')
 	light_source = pd.DataFrame(light_source_full[cols].values)
-	# new_cols = ['pcode_ts', 'light_total', 'l_source_electricity', 'l_source_kerosene',\
-	# 		'l_source_candle', 'l_source_lbattery', 'l_source_generator',\
-	# 		'l_source_water', 'l_source_solar', 'l_source_other']
 	light_source.columns = cols
 
 	# Census transportation data
